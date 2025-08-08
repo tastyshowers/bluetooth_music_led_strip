@@ -1,0 +1,5 @@
+../Core/Src/ws2812.c:16:6:send_data_hue	13
+../Core/Src/ws2812.c:61:6:send_data_color_value	4
+../Core/Src/ws2812.c:80:6:show_leds	3
+../Core/Src/ws2812.c:90:6:send_data_rgb	2
+../Core/Src/ws2812.c:102:6:HAL_TIM_PWM_PulseFinishedCallback	2
