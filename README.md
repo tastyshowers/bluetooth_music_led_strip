@@ -32,3 +32,13 @@ something
 ### Build & Flash
 ```bash
 python testLED.py
+
+```
+---
+## Vision
+Custom PCB that connects to device (phone, laptop, etc) through custom software, which will make strip configurable in color, brightness, etc. This software would connect to the strip and to another music source for extra volume, if that's possible.
+## Issues/Improvements
+1. Implement input to adjust delay in real time to sync up music with LED
+2. More compact design
+3. Playlist to store 
+4. Area to store preexisting timestamps
