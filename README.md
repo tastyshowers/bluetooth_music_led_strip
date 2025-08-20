@@ -6,7 +6,7 @@ and/or frequences (bass, treble, etc) as timestamps which are then used to activ
 
 ![Block Diagram](blockdiagram.jpg?raw=true "Block Diagram")
 
-Above represents a simple block diagram of this project.
+Above represents a simple block diagram of this project
 ### PC (or any other device running Python)
 - Represents a device that can run bt.py. bt.py sends data to the HT-08 module at certain timestamps of the loaded song. bt.py also handles playing the audio, syncing the times the data is sent to the HT-08 module with the playback of the audio.
 ### HC-08 Module
@@ -20,7 +20,7 @@ Above represents a simple block diagram of this project.
 ---
 
 ## Demo
-something
+https://youtu.be/bkHBm-ZQEqo
 
 ---
 
@@ -35,10 +35,11 @@ something
 - 
 
 ---
-
-## Quick Start
+## Setup
+### Wiring Diagram
+![Wiring Diagram](wiringdiagram.jpg?raw=true "Wiring Diagram")
 ### Requirements
-- Toolchain: (e.g., `arm-none-eabi-gcc`, PlatformIO, Arduino IDE)
+- Toolchain: `arm-none-eabi-gcc`
 - Libraries: [List exact library versions]
 - Hardware: [Board model, sensors, actuators]
 
