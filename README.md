@@ -31,23 +31,33 @@ https://youtu.be/bkHBm-ZQEqo
 
 ---
 
-## Skills Demonstrated
-- 
-
 ---
 ## Setup
+
 ### Wiring Diagram
 ![Wiring Diagram](wiringdiagram.jpg?raw=true "Wiring Diagram")
-### Requirements
-- Toolchain: `arm-none-eabi-gcc`
-- Libraries: [List exact library versions]
-- Hardware: [Board model, sensors, actuators]
+
+### Peripherals
+- STM32 NUCLEOC031C6 microcontroller
+- WS2812b LED strip
+- HC-08 Bluetooth Module
+  
+### Software Requirements
+- STM32CubeIDE
+- STM32CubeMX
+- HAL
+- Python 3.12
 
 ### Build & Flash
-```bash
-python testLED.py
+1. Open project in STM32CubeIDE
+2. Connect board via ST-Link port
+3. Build
+4. Flash
 
-```
+### Usage
+1. Open bt.py on device able to run Python and has Bluetooth capabilities.
+2. Load desired songs in .wav format into songs folder.
+3. Run bt.py, wait for connection to HC-08, and input song to play.
 ---
 ## Vision
 Custom PCB that connects to device (phone, laptop, etc) through custom software, which will make strip configurable in color, brightness, etc. This software would connect to the strip and to an audio source for extra volume, if needed.
