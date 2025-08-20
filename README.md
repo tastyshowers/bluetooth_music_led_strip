@@ -4,6 +4,19 @@
 This project seeks to solve an issue where microphone dependent reactive LED strips cannot separate intended sound from background noise, leading to unwanted reactions from the LED strip. This problem is solved by preprocessing the music for peaks in volume
 and/or frequences (bass, treble, etc) as timestamps which are then used to activate an LED strip at each of those timestamps. The downsides are that the LED strip is not truly reactive and is relatively hard to manage since many components are needed.
 
+![Block Diagram](blockdiagram.jpg?raw=true "Block Diagram")
+
+Above represents a simple block diagram of this project.
+### PC (or any other device running Python)
+- Represents a device that can run bt.py. bt.py sends data to the HT-08 module at certain timestamps of the loaded song. bt.py also handles playing the audio, syncing the times the data is sent to the HT-08 module with the playback of the audio.
+### HC-08 Module
+- HC-08 receives data through Bluetooth which then can be transferred to the microcontroller using USART since TX and RX lines are connected to this module. 
+### STM32 Microcontroller
+- The microcontroller handles the incoming data from HC-08 and drives the communication to WS2812b. Regarding the incoming data, the code only cares about when exactly the data comes so that it can activate the LED strip to mimic the feeling of "reactiveness." When incoming data is detected, the microcontroller powers on the WS2812b strip to red and linearly fades it to off.
+### WS2812b
+- This is the LED strip that flashes in beat with the audio playback.
+
+
 ---
 
 ## Demo
