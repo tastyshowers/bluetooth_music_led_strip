@@ -48,12 +48,12 @@ async def main():
             import librosa
 
             print("Available songs:")
-            for song_title in os.listdir(r"C:\WAV Files"):
+            for song_title in os.listdir(r"songs"):
                 print(song_title[:-4])
             song = input("Type the song to play: ")
-            while not os.path.isfile(rf"C:\WAV Files\{song}.wav"):
+            while not os.path.isfile(rf"songs\{song}.wav"):
                 song = input("Invalid song. Type the song to play. ")
-            y, sr = librosa.load(rf"C:\WAV Files\{song}.wav")
+            y, sr = librosa.load(rf"songs\{song}.wav")
 
             #TEMPO/BEAT
             #tempo, beat_frames = librosa.beat.beat_track(y=y, sr=sr)
@@ -65,5 +65,5 @@ async def main():
 
             #BASS
             timestamps = get_bass_peak_timestamps(y, sr)
-            await play_song(sd, sf, rf"C:\WAV Files\{song}.wav", client, timestamps)
+            await play_song(sd, sf, rf"songs\{song}.wav", client, timestamps)
 asyncio.run(main())

@@ -1,6 +1,6 @@
 ################################################################################
 # Automatically-generated file. Do not edit!
-# Toolchain: GNU Tools for STM32 (13.3.rel1)
+# Toolchain: GNU Tools for STM32 (12.3.rel1)
 ################################################################################
 
 -include ../makefile.init
@@ -34,34 +34,34 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := led_strip_bt
+BUILD_ARTIFACT_NAME := bluetooth_music_led_strip
 BUILD_ARTIFACT_EXTENSION := elf
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
 
 # Add inputs and outputs from these tool invocations to the build variables 
 EXECUTABLES += \
-led_strip_bt.elf \
+bluetooth_music_led_strip.elf \
 
 MAP_FILES += \
-led_strip_bt.map \
+bluetooth_music_led_strip.map \
 
 SIZE_OUTPUT += \
 default.size.stdout \
 
 OBJDUMP_LIST += \
-led_strip_bt.list \
+bluetooth_music_led_strip.list \
 
 
 # All Target
 all: main-build
 
 # Main-build Target
-main-build: led_strip_bt.elf secondary-outputs
+main-build: bluetooth_music_led_strip.elf secondary-outputs
 
 # Tool invocations
-led_strip_bt.elf led_strip_bt.map: $(OBJS) $(USER_OBJS) C:\embedded_programming\analog\STM32C031C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-gcc -o "led_strip_bt.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\embedded_programming\analog\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="led_strip_bt.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+bluetooth_music_led_strip.elf bluetooth_music_led_strip.map: $(OBJS) $(USER_OBJS) C:\Users\User\Downloads\bluetooth_music_led_strip\STM32C031C6TX_FLASH.ld makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-gcc -o "bluetooth_music_led_strip.elf" @"objects.list" $(USER_OBJS) $(LIBS) -mcpu=cortex-m0plus -T"C:\Users\User\Downloads\bluetooth_music_led_strip\STM32C031C6TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="bluetooth_music_led_strip.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
 	@echo 'Finished building target: $@'
 	@echo ' '
 
@@ -70,14 +70,14 @@ default.size.stdout: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
 	@echo 'Finished building: $@'
 	@echo ' '
 
-led_strip_bt.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
-	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "led_strip_bt.list"
+bluetooth_music_led_strip.list: $(EXECUTABLES) makefile objects.list $(OPTIONAL_TOOL_DEPS)
+	arm-none-eabi-objdump -h -S $(EXECUTABLES) > "bluetooth_music_led_strip.list"
 	@echo 'Finished building: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) default.size.stdout led_strip_bt.elf led_strip_bt.list led_strip_bt.map
+	-$(RM) bluetooth_music_led_strip.elf bluetooth_music_led_strip.list bluetooth_music_led_strip.map default.size.stdout
 	-@echo ' '
 
 secondary-outputs: $(SIZE_OUTPUT) $(OBJDUMP_LIST)
