@@ -57,7 +57,8 @@ https://youtu.be/bkHBm-ZQEqo
 ### Usage
 1. Open bt.py on device able to run Python and has Bluetooth capabilities.
 2. Load desired songs in .wav format into songs folder.
-3. Run bt.py, wait for connection to HC-08, and input song to play.
+3. Ensure that Bluetooth is turned on.
+4. Run bt.py, wait for connection to HC-08, and input song to play.
 ---
 ## Vision
 Custom PCB that connects to device (phone, laptop, etc) through custom software, which will make strip configurable in color, brightness, etc. This software would connect to the strip and to an audio source for extra volume, if needed.
