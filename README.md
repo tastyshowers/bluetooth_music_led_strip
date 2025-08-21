@@ -49,10 +49,13 @@ https://youtu.be/bkHBm-ZQEqo
 - Python 3.12
 
 ### Build & Flash
-1. Open project in STM32CubeIDE
-2. Connect board via ST-Link port
-3. Build
-4. Flash
+1. Clone and open STM32CubeIDE. The location of the workspace does not matter relative to the cloned repo.
+2. Open the Project Explorer tab (Window -> Show View -> Project Explorer) File -> Import -> General -> Existing Projects into Workspace. Select root directory where the cloned repo is stored, check the box next to the name of the repo in the Projects results box, then click Finish. The project will appear in the Project Explorer.
+3. Wire accordingly to the wiring diagram
+4. Connect board via ST-Link port
+5. Select the project in Project Explorer on left hand side.
+6. Build
+7. Flash
 
 ### Usage
 1. Open bt.py on device able to run Python and has Bluetooth capabilities.
